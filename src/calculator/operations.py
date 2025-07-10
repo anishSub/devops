@@ -19,5 +19,5 @@ def divide(a, b):
     return a / b
 
 
-def power(a):
-    return a ** a
+def power(a, b):
+    return a ** b
