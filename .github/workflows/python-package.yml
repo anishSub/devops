@@ -40,10 +40,10 @@ jobs:
         pytest
 
     - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@latest
-        env:
+      uses: SonarSource/sonarcloud-github-action@v2
+      env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
+      with:
           args: >
             -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
             -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
