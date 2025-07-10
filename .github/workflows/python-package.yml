@@ -40,7 +40,7 @@ jobs:
         pytest
 
     - name: SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@latest
+        uses: SonarSource/sonarqube-scan-action@v2
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
@@ -48,3 +48,4 @@ jobs:
             -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
             -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
             -Dsonar.sources=.
+            -Dsonar.verbose=true
