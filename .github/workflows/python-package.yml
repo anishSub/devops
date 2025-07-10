@@ -40,7 +40,7 @@ jobs:
         pytest
 
     - name: SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@v4.1.0
+        uses: SonarSource/sonarcloud-github-action@latest
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
